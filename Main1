@@ -18,7 +18,7 @@ public class Main1 {
         }
         currInt = 1;
         while(currInt != 0) {
-            currInt = inB.nextInt();
+            currInt = inB.nextInt(); 
             fileB.add(currInt);
         }
 
