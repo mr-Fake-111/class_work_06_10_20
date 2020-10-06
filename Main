@@ -20,8 +20,8 @@ public class Main {
         System.out.println(calc(fileA) + " " + calc(fileB));
     }
     public static int calc(ArrayList<Integer> fileA) {
-        int max7 = 1;
-        int maxOther = 1;
+        int max7 = 0;
+        int maxOther = 0;
         for (int i = 0; i < fileA.size(); i++) {
             if(fileA.get(i) % 7 == 0 && fileA.get(i) % 49 != 0) {
                 if(max7 < fileA.get(i)) max7 = fileA.get(i);
@@ -29,6 +29,7 @@ public class Main {
                 if(maxOther < fileA.get(i)) maxOther = fileA.get(i);
             }
         }
+        if(max7== 0 || maxOther == 0) return 1; else
         return max7*maxOther;
     }
 }
