@@ -1,0 +1,17 @@
+drop table if exists users;
+
+create table if not exists users (id serial not null unique, 
+								  uname VARCHAR(100) not null unique,
+								  likes_got integer,
+								  likes_given integer, 
+								  mutual_likes integer, 
+								  primary key (id));
+
+insert into users (uname, likes_got, likes_given, mutual_likes) values
+			('fedor', 1, 45, 1),
+			('vasya', 15, 77, 10),
+			('tasya', 10, 111, 7),
+  		    ('masha', 4, 15, 2),
+			('grigoriy', 77, 123, 35);
+
+select * from users order by users.likes_given asc;
